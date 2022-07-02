@@ -10,9 +10,16 @@ humb.addEventListener('click', humbHandler);
 function humbHandler(event) {
    event.preventDefault();
    
-   poppup.classList.toggle('open');
-   humb.classList.toggle('active'); 
-   body.classList.toggle('noscroll');
+   if (humb.classList.contains('active')) {
+      humb.classList.remove('active');
+      poppup.classList.remove('open');
+      body.style.overflow = '';
+   } else {
+      humb.classList.add('active');
+      poppup.classList.add('open');
+      body.style.overflow = 'hidden';
+   }
+
    renderPoppup();
 }
 

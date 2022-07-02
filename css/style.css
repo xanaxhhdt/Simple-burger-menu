@@ -164,7 +164,7 @@ img {
    .hamb__field.active .bar:nth-child(3) {
       transform: translateY(-8px) rotate(-45deg);
    }
-   body.noscroll {
+   /* body.noscroll {
       overflow: hidden;
-   }
+   } */
 }
